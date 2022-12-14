@@ -69,5 +69,12 @@
     height: 50%;
 }
 .event {
+    background-color: #e0e0e0;
+    margin: 5px;
+    padding: 15px;
+    border: 1px solid #000000;
+    text-align: left;
+}
+.event:hover {
     background-color: #c9c9c9;
 }
