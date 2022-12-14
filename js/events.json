@@ -26,13 +26,13 @@
     {
         "idEvent": "3",
         "idLocation": "1",
-        "typeEvent": "2",
-        "nameEvent": "Event 3",
+        "typeEvent": "1",
+        "nameEvent": "Event 1.2",
         "dateEventStart": "2019-01-01",
         "dateEventEnd": "2020-01-01",
         "eventTimeStart": "24:00:00",
         "eventTimeEnd": "24:00:00",
-        "descriptionEvent": "Description 3",
+        "descriptionEvent": "Description 2",
         "imageEvent": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
     }
 ]
