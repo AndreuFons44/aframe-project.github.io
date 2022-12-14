@@ -1,0 +1,32 @@
+[
+    {
+        "id": "0",
+        "name": "Roca",
+        "description": "Description Roca Natural",
+        "image": "img/built.png",
+        "type": "rocaModelE",
+        "position": "0 0 0",
+        "rotation": "0 0 0",
+        "scale": "10 10 10",
+        "width":"1",
+        "height":"1",
+        "depth":"1",
+        "clicked": true,
+        "color": "F21194"
+    },
+    {
+        "id": "1",
+        "name": "Roca",
+        "description": "Description Roca Natural",
+        "image": "img/built.png",
+        "type": "rocaModelE",
+        "position": "3 0 0",
+        "rotation": "0 0 0",
+        "scale": "9 9 9",
+        "width":"1",
+        "height":"1",
+        "depth":"1",
+        "clicked": true,
+        "color": "F21194"
+    }
+]

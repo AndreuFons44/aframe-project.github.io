@@ -11,6 +11,7 @@
         "width":"3",
         "height":"2",
         "depth":"1",
+        "clicked": true,
         "color": "F21194"
     },
     {
@@ -25,6 +26,7 @@
         "width":"3",
         "height":"3",
         "depth":"3",
+        "clicked": true,
         "color": "D204DB"
     },
     {
@@ -39,6 +41,7 @@
         "width":"1",
         "height":"1",
         "depth":"1",
+        "clicked": true,
         "color": "AC05F9"
     },
     {
@@ -53,6 +56,7 @@
         "width":"1",
         "height":"1",
         "depth":"1",
+        "clicked": true,
         "color": "F92305"
     },
     {
@@ -67,6 +71,7 @@
         "width":"1",
         "height":"1",
         "depth":"1",
+        "clicked": true,
         "color": "F9A705"
     },
     {   
@@ -81,20 +86,22 @@
         "width":"1",
         "height":"1",
         "depth":"1",
+        "clicked": true,
         "color": "F9F205"
     },
-    {   
-        "id": "10",
-        "name": "Built6",
+    {
+        "id": "20",
+        "name": "Built20",
         "description": "Description Built1",
         "image": "img/built.png",
         "type": "city",
-        "position": "9 0 0",
-        "rotation": "0 180 0",
+        "position": "9 2 2",
+        "rotation": "0 90 0",
         "scale": "1 1 1",
         "width":"1",
         "height":"1",
         "depth":"1",
+        "clicked": true,
         "color": "F9F205"
     },
     {
@@ -109,6 +116,7 @@
         "width":"1",
         "height":"1",
         "depth":"1",
+        "clicked": true,
         "color": "F9F205"
     },
     {
@@ -123,6 +131,7 @@
         "width":"1",
         "height":"1",
         "depth":"1",
+        "clicked": true,
         "color": "F9F205"
     },
     {
@@ -137,6 +146,7 @@
         "width":"1",
         "height":"1",
         "depth":"1",
+        "clicked": true,
         "color": "F9F205"
     }
 ]

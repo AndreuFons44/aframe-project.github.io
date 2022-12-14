@@ -7,6 +7,7 @@
     <script src="js/city.json"></script>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="js/openlevel.js"></script>
+    <script src="js/camera.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
@@ -14,15 +15,19 @@
     <a-scene>
         <a-assets>
             <a-asset-item id="cityModel" src="./Model/Built.glb"></a-asset-item>
+            <a-asset-item id="rocaModelE" src="./Model/model1/rock_tallE.glb"></a-asset-item>
+            <a-asset-item id="rocaModelF" src="./Model/model1/rock_tallF.glb"></a-asset-item>
+            <a-asset-item id="rocaModelG" src="./Model/model1/rock_tallG.glb"></a-asset-item>
+            <a-asset-item id="rocaModelH" src="./Model/model1/rock_tallH.glb"></a-asset-item>
             <a-mixin id="built" material="color: red"></a-mixin>
             <a-mixin id="animate" animation="property: position; to: 0 -1 0; dur: 500; loop: false"></a-mixin>
             <a-mixin id="builts" gltf-model="#cityModel"></a-mixin>
         </a-assets>
-        <a-entity ></a-entity>
+        <a-box id="rootcamera"></a-box>
         <a-entity create infobuilt mixin="animate" outline></a-entity>
         <a-sky color="#ECECEC"></a-sky>
 
-        <a-entity camera look-controls position="5 8 25" active="true" ><a-cursor raycaster="objects:.click"></a-cursor></a-entity>
+        <a-entity camera look-controls active="true" orbita="target:#rootcamera; distancia:20; velocitat:0.010" ><a-cursor raycaster="objects:.click"></a-cursor></a-entity>
       </a-scene>
       <div>
         <button id="menu" onclick="openMenu()"><img class="icon-1" src = "icon/menu.svg" alt="all"/>MENU</button>
@@ -34,11 +39,11 @@
             </div>
             <div id="menu-event">
                 <h1>hola</h1>
-                <div class="event">
+                <div class="event hidden">
                     <a onclick="openinfoevemt()">
                         Event
                     </a>
-                    <div id="1" class="visble">
+                    <div id="1" class="hidden">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, nulla! Vero ad ex unde obcaecati sapiente laborum, ipsum modi, odit totam odio at commodi ea? Officiis laborum quis exercitationem est.</p>
                     </div>
                 </div>

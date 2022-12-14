@@ -28,7 +28,11 @@ AFRAME.registerComponent('create', {
     init: function () {
         for (var i = 0; i < datacity.length; i++) {
             var entity = document.createElement('a-entity');
-            entity.setAttribute('class', 'click built '+ datacity[i].type);
+            if(datacity[i].clicked == true){
+                entity.setAttribute('class', 'click built '+ datacity[i].type);
+            } else {
+                entity.setAttribute('class', 'built '+ datacity[i].type);
+            }
             entity.setAttribute('mixin', 'builts');
             entity.setAttribute('infobuilt','id', datacity[i].id);
             entity.setAttribute('position', datacity[i].position);
@@ -55,10 +59,11 @@ AFRAME.registerComponent('infobuilt', {
                 clearEvent();
                 //clearInfo();
                 createinfoBuilt(id)
+                consoleinfoBuilt(id)
                 openMenu();
                 for(var i = 0; i < dataevent.length; i++){
                     if(dataevent[i].idLocation == id){
-                        consoleLog(i);
+                        //consoleLog(i);
                         createEvent(i);
                     }
                 }
@@ -72,7 +77,6 @@ AFRAME.registerComponent('infobuilt', {
 function createinfoBuilt(i) {
     openInfo();
     const info = document.getElementById('menu-info');
-    info.innerHTML = "<img src=" + datacity[i].image + " alt=''>";
     info.innerHTML = "<h1>" + datacity[i].name + "</h1>" + "<p>" + datacity[i].description + "</p>";
 }
 
@@ -99,6 +103,15 @@ function clearInfo(){
     }
 }
 
+function consoleinfoBuilt(i){
+    console.log("Name= " + datacity[i].name);
+    console.log("Description= " + datacity[i].description);
+    console.log("Position= " + datacity[i].position);
+    console.log("Rotation= " + datacity[i].rotation);
+    console.log("Scale= " + datacity[i].scale);
+    console.log("Color= " + datacity[i].color);
+    console.log("Type= " + datacity[i].type);
+}
 //console log for build
 function consoleLog(i){
     console.log("Name Event= " + dataevent[i].nameEvent);
@@ -162,16 +175,25 @@ function closeMenu() {
 function createEvent(id) {
     const event = document.createElement('div');
     event.setAttribute('id', 'event_' + id);
-    event.innerHTML = "<a onclick='openinfoevemt(event_" + id +")'>Event " + dataevent[id].nameEvent + "<img src='icon/info.svg' alt=''></a>";   
+    event.setAttribute('class', 'event');
+    event.innerHTML = "<a onclick='openinfoevent("+ id +")'>Event " + dataevent[id].nameEvent +  "</a>";   
     const container = document.getElementById('menu-event');
     container.appendChild(event);
-    
+
     const event1 = document.createElement('div');
+    event1.setAttribute('id', 'eventinfo_' + id );
     event1.setAttribute('class', 'hidden');
-    event.setAttribute('id', 'eventinfo_' + id);
-    event1.innerHTML = "<h1>" + dataevent[id].nameEvent + "</h1>" + "<p>" + dataevent[id].descriptionEvent + "</p>" + "<p>" + dataevent[id].dateEventStart + "</p>" + "<p>" + dataevent[id].eventTimeStart + "</p>" + "<p>" + dataevent[id].dateEventEnd + "</p>" + "<p>" + dataevent[id].eventTimeEnd + "</p>" + "<img src=" + dataevent[id].imageEvent + " alt=''>";
-    const container1 = document.getElementById('event_' + id);
+    event1.innerHTML = "<h1>" + dataevent[id].nameEvent +
+     "</h1>" + "<p>" + dataevent[id].descriptionEvent 
+     + "</p>"
+     + "<p>" + dataevent[id].dateEventStart 
+     + "</p>"
+     + "<p>" + dataevent[id].dateEventEnd 
+     + "</p>"+
+     "<img src='" + dataevent[id].imageEvent + "'/>";
+    const container1 = document.getElementById('event_' + id );
     container1.appendChild(event1);
+    
 
 }
 
@@ -197,13 +219,14 @@ function closeInfoEvent() {
 }
 
 
-function openinfoevemt(id) {
-    if((document.getElementById("eventinfo_" + id).getAttribute('class') == "visible")){
-        document.getElementById("eventinfo_" + id).setAttribute('class', 'hidden');
+function openinfoevent(id) {
+    console.log(id);
+    if((document.getElementById("eventinfo_" + id).getAttribute('class') == "hidden")){
+        document.getElementById("eventinfo_" + id).setAttribute('class', 'visible');
     }
     else
     {
-        document.getElementById("eventinfo_" + id).setAttribute('class', 'visible');
+        document.getElementById("eventinfo_" + id).setAttribute('class', 'hidden');
     }
 }
 
