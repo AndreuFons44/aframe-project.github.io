@@ -1,0 +1,68 @@
+[
+    {
+        "id": "1",
+        "name": "Built1",
+        "position": "0 0 1",
+        "rotation": "0 0 0",
+        "scale": "1 1 1",
+        "width":"1",
+        "height":"1",
+        "depth":"1",
+        "color": "F21194"
+    },
+    {
+        "id": "2",
+        "name": "Built2",
+        "position": "0 0 3",
+        "rotation": "0 0 0",
+        "scale": "1 1 1",
+        "width":"1",
+        "height":"1",
+        "depth":"1",
+        "color": "D204DB"
+    },
+    {
+        "id": "3",
+        "name": "Built3",
+        "position": "0 0 5",
+        "rotation": "0 0 0",
+        "scale": "1 1 1",
+        "width":"1",
+        "height":"1",
+        "depth":"1",
+        "color": "AC05F9"
+    },
+    {
+        "id": "4",
+        "name": "Built4",
+        "position": "0 0 7",
+        "rotation": "0 0 0",
+        "scale": "1 1 1",
+        "width":"1",
+        "height":"1",
+        "depth":"1",
+        "color": "F92305"
+    },
+    {
+        "id": "5",
+        "name": "Built5",
+        "position": "0 0 9",
+        "rotation": "0 0 0",
+        "scale": "1 1 1",
+        "width":"1",
+        "height":"1",
+        "depth":"1",
+        "color": "F9A705"
+    },
+    {   
+        "id": "6",
+        "name": "Built6",
+        "position": "0 0 11",
+        "rotation": "0 0 0",
+        "scale": "1 1 1",
+        "width":"1",
+        "height":"1",
+        "depth":"1",
+        "color": "F9F205"
+    } 
+]

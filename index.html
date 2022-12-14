@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/city.json"></script>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="js/openlevel.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="cityModel" src="./Model/Built.glb"></a-asset-item>
+            <a-mixin id="built" material="color: red"></a-mixin>
+            <a-mixin id="animate" animation="property: position; to: 0 -1 0; dur: 500; loop: false"></a-mixin>
+            <a-mixin id="builts" gltf-model="#cityModel"></a-mixin>
+        </a-assets>
+        <a-entity ></a-entity>
+        <a-entity create infobuilt mixin="animate" outline></a-entity>
+        <a-sky color="#ECECEC"></a-sky>
+
+        <a-entity camera look-controls position="5 8 25" active="true" ><a-cursor raycaster="objects:.click"></a-cursor></a-entity>
+      </a-scene>
+      <div>
+        <button id="menu" onclick="openMenu()"><img class="icon-1" src = "icon/menu.svg" alt="all"/>MENU</button>
+        <div id="overlay" class="hidden">
+            <div id="menu-content">
+            </div>
+            <div id="menu-info">
+                <h1>hola</h1>
+            </div>
+            <div id="menu-event">
+                <h1>hola</h1>
+                <div class="event">
+                    <a onclick="openinfoevemt(1)">
+                        Event
+                        <img class="icon-1" src="icon/info.svg" alt="all"/>
+                    </a>
+                    <div id="1" class="hidden">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, nulla! Vero ad ex unde obcaecati sapiente laborum, ipsum modi, odit totam odio at commodi ea? Officiis laborum quis exercitationem est.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+</body>
+</html>
