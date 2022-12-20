@@ -29,7 +29,7 @@ AFRAME.registerComponent('create', {
             } else {
                 entity.setAttribute('class', 'built '+ datacity[i].type);
             }
-            entity.setAttribute('mixin', 'builts');
+            entity.setAttribute('mixin', datacity[i].model);
             entity.setAttribute('infobuilt','id', datacity[i].id);
             entity.setAttribute('position', datacity[i].position);
             entity.setAttribute('rotation', datacity[i].rotation);

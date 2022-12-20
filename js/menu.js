@@ -68,27 +68,27 @@ function closeInfoEvent() {
 function createinfoBuilt(i) {
     openInfo();
     const info = document.getElementById('menu-info');
-    info.innerHTML = "<h1>" + datacity[i].name + "</h1>" + "<p>" + datacity[i].description + "</p>";
+    info.innerHTML = "<h1>" + datacity[i].name + "</h1>" + 
+    "<p>" + datacity[i].description + "</p>"+
+    "<img src='" + datacity[i].image + "'/>";
 }
 
 function createEvent(id) {
     const event = document.createElement('div');
     event.setAttribute('id', 'event_' + id);
     event.setAttribute('class', 'event');
-    event.innerHTML = "<a onclick='openinfoevent("+ id +")'>Event " + dataevent[id].nameEvent +  "</a>";   
+    event.innerHTML = "<a onclick='openinfoevent("+ id +")'>Evento [" + dataevent[id].nameEvent +  "]</a>";   
     const container = document.getElementById('menu-event');
     container.appendChild(event);
 
     const event1 = document.createElement('div');
     event1.setAttribute('id', 'eventinfo_' + id );
     event1.setAttribute('class', 'hidden');
-    event1.innerHTML = "<h1>" + dataevent[id].nameEvent +
-     "</h1>" + "<p>" + dataevent[id].descriptionEvent 
-     + "</p>"
-     + "<p>" + dataevent[id].dateEventStart 
-     + "</p>"
-     + "<p>" + dataevent[id].dateEventEnd 
-     + "</p>"+
+    event1.innerHTML =
+     "<div class='info_event'><h1>" + dataevent[id].nameEvent + "</h1>" + 
+     "<p>" + dataevent[id].descriptionEvent + "</p></div>" + 
+     "<div class='date_event'><p class='date_1'>Inicio:" + dataevent[id].dateEventStart + "</p>" + 
+     "<p class='date_2'>Final:" + dataevent[id].dateEventEnd  + "</p></div>" +
      "<img src='" + dataevent[id].imageEvent + "'/>";
     const container1 = document.getElementById('event_' + id );
     container1.appendChild(event1);

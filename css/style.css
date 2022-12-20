@@ -1,18 +1,27 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@font-face 
+{ 
+font-family: "Inconsolata";  
+src: url("../font/Inconsolata/Inconsolata-VariableFont_wdth\,wght.ttf"); 
 }
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Inconsolata";
+}
+
 #overlay{
     position: absolute;
     z-index: 1;
     top: 0;
     left: 0;
-
-    background-color: rgba(255, 255, 255, 0.271);
+    padding: 5px 0 0 0;
+    background-color: rgba(7, 143, 255, 0.103);
     width: 300px;
     height: 100%;
-    border-right: 2px solid #0000003c;
+    border-right: 2px solid #000000;
+
+
 }
 #overlay {
     text-align: center;
@@ -25,7 +34,7 @@
     left: 0;
     padding: 5px;
     margin: 10px;
-    border: 2px solid #c9c9c9;    
+    border: 2px solid #000000;    
     border-radius: 10%;
 }
 /* all the menu items */
@@ -50,7 +59,9 @@
     padding: 5px;
     border-bottom: 1px solid #c9c9c9;
 }
-
+#menu-info img {
+    border-radius: 5%;
+}
 
 #infomenu1 {
     background-color: rgb(255, 255, 255);
@@ -68,41 +79,53 @@
     height: 50%;
 }
 .event {
-    background-color: #e0e0e0;
+    background-color: #ffffff;
     margin: 5px;
     padding: 15px;
-    border: 1px solid #00000032;
+    border: 1px solid #000000;
     text-align: left;
 }
 .event:hover {
     background-color: #e7e7e7;
 }
-
-#menu-content {
-    border-bottom: 2px solid #000000;
-}
-.menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    text-align: center;
+.event a {
     width: 100%;
+    height: 100%;
+}
+#menu-content{
+    width: 100%;
+    height: 50px;
+    padding: 10px;;
+}
+#menu-content button {
+    float: left;
+    padding: 5px;
+    border: 2px solid #070707;    
+    border-radius: 10%;
+}
+#menu-info{
+    margin-top: 10px;
+    text-align: center;
+}
 
+.info_event{
+    margin-top: 5px;
+    text-align: center;
 }
-  
-.menu li {
-    width: 25%;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: 600;
-    background-color: rgb(255, 255, 255);
-    cursor: pointer;
-    transition: all 0.3s ease;
+.date_event{
+    text-align: center;
+    background-color: aqua;
 }
-.menu li a{
-    color: #000;
-    text-decoration: none;
+.date_event .date_1 {
+    padding: 5px;
+    float: left;
 }
-.menu li:hover {
-    background-color: #e7e7e7;
+.date_event .date_2 {
+    padding: 5px;
+    float: left;
+}
+.event img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
 }
